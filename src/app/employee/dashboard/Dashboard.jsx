@@ -5,7 +5,7 @@ import Layout from "../../../layouts/Layout";
 import MonthlyAttendanceCalendars from "./MonthlyAttendanceCalendars";
 import "react-calendar/dist/Calendar.css";
 import QuickLinksCard from "./QuickLinksCard";
-import MyTable from "./MyTable";
+import AttendanceGraph from "./AttendanceGraph";
 import styles from "./style.module.css";
 import API_BASE_URL from "../../../../config/config";
 import MessagingCard from "./MessagingCard";
@@ -28,8 +28,6 @@ const Dashboard = ({ accessData }) => {
           method: "GET",
           credentials: "include", // Include cookies with the request
         });
-
-        console.log("Dashboard API response status:", response.status);
 
         if (response.status === 401) {
           setUnauthorized(true); // Mark unauthorized state
@@ -91,7 +89,7 @@ const Dashboard = ({ accessData }) => {
         </div>
 
         <br />
-        <MyTable selectedEmployee={selectedEmployee} setSelectedEmployee={setSelectedEmployee} />
+        <AttendanceGraph selectedEmployee={selectedEmployee} setSelectedEmployee={setSelectedEmployee} />
         <br />
 
         <div style={{ paddingBottom: "40px" }}>

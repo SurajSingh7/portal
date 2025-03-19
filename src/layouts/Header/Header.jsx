@@ -61,7 +61,6 @@ const Header = ({ heading, status, func }) => {
           const result = await response.json();
           const employeeData = result.data[0];
           const { email, department, basicemployees, role } = employeeData;
-          // console.log("depa@@@@@@@@@@@@@@@",department.roles.name);
 
           setUserData({
             email,

@@ -69,7 +69,7 @@ const EmployeeCard = ({ userData }) => {
       onCancel={handleModalToggle}
       width="80%" // Use a percentage for responsive width
       footer={null}
-      bodyStyle={{
+      styles={{
         padding: "20px",
         backgroundColor: "#f9fafb", // Light gray background for a clean look
         borderRadius: "8px",

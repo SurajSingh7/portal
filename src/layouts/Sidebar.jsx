@@ -16,8 +16,6 @@ const Sidebar = ({ status }) => {
   const role=process.env.NEXT_PUBLIC_ROLE;
   const sadmin=process.env.NEXT_PUBLIC_S_ADMIN;
   
-  console.log("line 19 ",department,role,sadmin)
-
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
@@ -44,7 +42,6 @@ const Sidebar = ({ status }) => {
         }
 
         const result = await response.json();
-        console.log("API Response:", result); // Debugging API response
 
         if (!result.data || result.data.length === 0) {
           console.warn("No user data received");
@@ -65,9 +62,6 @@ const Sidebar = ({ status }) => {
           employeeCode: basicemployees?.employeeCode || "",
           profileImage: basicemployees?.profileImage || "",
         });
-
-        console.log("UserData Updated:", userData); // Debugging userData state
-
       } catch (err) {
         console.error("Fetch Error:", err);
         setError("Something went wrong");
@@ -80,8 +74,6 @@ const Sidebar = ({ status }) => {
   }, []);
 
   if (loading) return <div>Loading...</div>;
-
-  console.log("Final userData:", userData); // Debugging final state
 
   // Construct menu items based on conditions
   const menuItemsData = [

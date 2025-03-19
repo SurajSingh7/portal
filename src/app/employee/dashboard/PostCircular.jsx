@@ -7,7 +7,6 @@ const PostCircular = () => {
   const cardRef = useRef(null);
 
   const handleSend = () => {
-    console.log("Message sent:", message);
     // Add logic to handle sending the message
     setMessage(""); // Clear the input field after sending
   };

@@ -26,5 +26,3 @@ const data = [
   const endDate = '2024-05-31';
   
   const filteredData = filterByDateRange(data, startDate, endDate);
-  
-  console.log(filteredData);

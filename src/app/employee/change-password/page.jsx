@@ -34,8 +34,6 @@ const ChangePasswordForm = () => {
       });
 
       const result = await response.json();
-      console.log("payload",payload)
-console.log("result",result)
       if (response.ok) {
         message.success("Password changed successfully!");
         form.resetFields();
