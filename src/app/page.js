@@ -5,7 +5,6 @@ import ClientLogin from './ClientLogin';
 export default async function LoginPage() {
     const cookie = await cookies(); // Await the cookies function
     const hasAccess = cookie.get('hasAccess')?.value || null;
-    console.log('Has Access:', hasAccess);
 
     return (
         <>
