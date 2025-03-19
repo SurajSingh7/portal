@@ -223,7 +223,7 @@ const MonthlyAttendanceCalendars = ({ selectedEmployee }) => {
       try {
         const response = await axios.get(`${process.env.NEXT_PUBLIC_ATTENDANCE_URL}user/attendance/employee`, {
           params: {
-            employeeCode: selectedEmployee || "WIBRO0065",
+            employeeCode: selectedEmployee,
             filterType: "month",
             startDate: new Date(currentMonth.getFullYear(), currentMonth.getMonth(), 1).toISOString(),
           },
