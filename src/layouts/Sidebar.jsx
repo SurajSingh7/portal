@@ -94,7 +94,7 @@ const Sidebar = ({ status }) => {
       key: "hr-admin",
       icon: <TeamOutlined/>,
       label: (
-        <a href={`${process.env.HR_ADMIN_URL}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
+        <a href={`${process.env.NEXT_PUBLIC_HR_ADMIN_URL}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
         HR-Admin
         </a>
       ),
@@ -107,7 +107,7 @@ const Sidebar = ({ status }) => {
       key: "s-admin",
       icon: <UserOutlined />,
       label: (
-      <a href={`${process.env.HR_ADMIN_URL}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
+      <a href={`${process.env.NEXT_PUBLIC_SUPER_ADMIN_URL}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
           C-Pannel
         </a>
       ),
