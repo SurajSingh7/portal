@@ -67,7 +67,7 @@ const MessageCard = () => {
             </p>
           </div>
           <h4 className="text-sm font-bold text-gray-800">
-            {message.senderName || "Anonymous"}
+          {message.department || "Anonymous"}
           </h4>
           <p className="text-gray-700 text-sm mt-1 truncate">
             {message.content}
@@ -105,7 +105,7 @@ const MessageCard = () => {
               </p>
             </div>
             <h4 className="text-sm font-bold text-gray-800">
-              {message.senderName || "Anonymous"}
+            {message.department || "Anonymous"}
             </h4>
             <p className="text-gray-700 text-sm mt-1">{message.content}</p>
           </div>

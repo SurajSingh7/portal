@@ -94,8 +94,8 @@ const Sidebar = ({ status }) => {
       key: "hr-admin",
       icon: <TeamOutlined/>,
       label: (
-        <a href="http://10.253.71.78:5007/hrdepartment/staffregistration" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
-          hr-Admin
+        <a href={`${process.env.HR_ADMIN_URL}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
+        HR-Admin
         </a>
       ),
     });
@@ -107,8 +107,8 @@ const Sidebar = ({ status }) => {
       key: "s-admin",
       icon: <UserOutlined />,
       label: (
-        <a href="http://10.253.71.78:5006/super-admin/company-master" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
-          S-Admin
+      <a href={`${process.env.HR_ADMIN_URL}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
+          C-Pannel
         </a>
       ),
     });

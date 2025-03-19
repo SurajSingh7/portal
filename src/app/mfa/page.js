@@ -86,11 +86,14 @@ const MfaSetup = () => {
         setMessage("MFA enabled successfully! We are Redirecting you.");
    
         if(result.isAdmin === true){
-          // router.push("super-admin/company-master")
           router.push("employee/dashboard");
+          router.replace("/employee/dashboard");
+          window.location.href = "/employee/dashboard";
         }
         else{
           router.push("employee/dashboard");
+          router.replace("/employee/dashboard");
+          window.location.href = "/employee/dashboard";
         }
       } else {
         setMessage(result.message || "Invalid token. Please try again.");
