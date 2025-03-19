@@ -16,7 +16,7 @@ const Sidebar = ({ status }) => {
   const role=process.env.NEXT_PUBLIC_ROLE;
   const sadmin=process.env.NEXT_PUBLIC_S_ADMIN;
   const superAdminUrl=process.env.NEXT_PUBLIC_SUPER_ADMIN_URL;
-  const hrAdminUrl=process.env.HR_ADMIN_URL
+  const hrAdminUrl=process.env.NEXT_PUBLIC_HR_ADMIN_URL
   
   useEffect(() => {
     const fetchDashboardData = async () => {
