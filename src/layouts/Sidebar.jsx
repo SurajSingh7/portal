@@ -15,6 +15,8 @@ const Sidebar = ({ status }) => {
   const department=process.env.NEXT_PUBLIC_DEPARTMENT;
   const role=process.env.NEXT_PUBLIC_ROLE;
   const sadmin=process.env.NEXT_PUBLIC_S_ADMIN;
+  const superAdminUrl=process.env.NEXT_PUBLIC_SUPER_ADMIN_URL;
+  const hrAdminUrl=process.env.HR_ADMIN_URL
   
   useEffect(() => {
     const fetchDashboardData = async () => {
@@ -94,7 +96,7 @@ const Sidebar = ({ status }) => {
       key: "hr-admin",
       icon: <TeamOutlined/>,
       label: (
-        <a href={`${process.env.NEXT_PUBLIC_HR_ADMIN_URL}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
+        <a href={hrAdminUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
         HR-Admin
         </a>
       ),
@@ -107,7 +109,7 @@ const Sidebar = ({ status }) => {
       key: "s-admin",
       icon: <UserOutlined />,
       label: (
-      <a href={`${process.env.NEXT_PUBLIC_SUPER_ADMIN_URL}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
+      <a href={superAdminUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white" }}>
           C-Pannel
         </a>
       ),
